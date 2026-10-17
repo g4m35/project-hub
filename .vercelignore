@@ -1,0 +1,11 @@
+.env*
+.git
+.data
+.neon
+node_modules
+release-evidence
+design-verification
+test
+examples
+docs
+*.log

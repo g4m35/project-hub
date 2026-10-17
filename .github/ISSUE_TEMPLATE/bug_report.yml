@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible problem using synthetic data.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Never attach environment files, tokens, databases, private chat names or raw logs. For security issues, follow SECURITY.md."
+  - type: input
+    id: version
+    attributes:
+      label: Version, operating system and Node version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce with demo data
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "seeded": true,
+  "projects": [
+    {
+      "id": "1111111111111111",
+      "name": "Demo \u00b7 Notes app",
+      "path": null,
+      "repo": null,
+      "vercel": null,
+      "stack": [
+        {
+          "id": "1111111111111111",
+          "name": "GitHub",
+          "role": "Source + issues",
+          "kind": "source",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        },
+        {
+          "id": "2222222222222222",
+          "name": "Next.js",
+          "role": "Web + API",
+          "kind": "app",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        },
+        {
+          "id": "3333333333333333",
+          "name": "PostgreSQL",
+          "role": "Database",
+          "kind": "data",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        },
+        {
+          "id": "4444444444444444",
+          "name": "Vercel",
+          "role": "Hosting",
+          "kind": "deploy",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        }
+      ],
+      "files": [],
+      "scannedAt": "2026-01-01T00:00:00.000Z",
+      "modifiedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2222222222222222",
+      "name": "Demo \u00b7 Habit tracker",
+      "path": null,
+      "repo": null,
+      "vercel": null,
+      "stack": [
+        {
+          "id": "1111111111111111",
+          "name": "GitHub",
+          "role": "Source + issues",
+          "kind": "source",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        },
+        {
+          "id": "2222222222222222",
+          "name": "Next.js",
+          "role": "Web + API",
+          "kind": "app",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        },
+        {
+          "id": "3333333333333333",
+          "name": "PostgreSQL",
+          "role": "Database",
+          "kind": "data",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        },
+        {
+          "id": "4444444444444444",
+          "name": "Vercel",
+          "role": "Hosting",
+          "kind": "deploy",
+          "detected": false,
+          "evidence": [
+            "Fictional demo data"
+          ]
+        }
+      ],
+      "files": [],
+      "scannedAt": "2026-01-01T00:00:00.000Z",
+      "modifiedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "name": "Demo hosting",
+      "amount": 12,
+      "currency": "USD",
+      "interval": "monthly",
+      "nextDue": "2099-01-01",
+      "projectId": "shared",
+      "notes": "Fictional example; not a real bill.",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}

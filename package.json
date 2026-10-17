@@ -1,0 +1,45 @@
+{
+  "name": "project-hub",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "start": "node --env-file-if-exists=.env.local server/index.mjs",
+    "demo": "node scripts/demo.mjs",
+    "doctor": "node --env-file-if-exists=.env.local scripts/doctor.mjs",
+    "build": "vite build",
+    "build:cloud": "node scripts/build-cloud.mjs",
+    "test": "node --test test/*.test.mjs",
+    "cloud:check": "node --env-file=.env.cloud scripts/doctor.mjs --cloud",
+    "cloud:init": "node --env-file=.env.cloud scripts/migrate-cloud.mjs",
+    "cloud:events": "node --env-file=.env.cloud scripts/setup-live.mjs prepare",
+    "sync:install": "node --env-file=.env.cloud scripts/setup-live.mjs install",
+    "sync:stop": "node --env-file=.env.cloud scripts/setup-live.mjs stop",
+    "release:check": "node scripts/release-check.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@xyflow/react": "^12.9.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "vite": "^7.1.0"
+  },
+  "description": "A private project hub for connected stacks, issues, deployments, AI chat activity and renewals.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "keywords": [
+    "developer-tools",
+    "self-hosted",
+    "project-management",
+    "dashboard"
+  ]
+}

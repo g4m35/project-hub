@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.data/
+coverage/
+.env*
+!.env.local.example
+!.env.cloud.example
+.vercel/
+.neon/
+*.log
+.DS_Store
+*.sqlite*
+*.db
+*.pem
+*.key
+cloud-secrets*
+# Private test/review evidence must not ship with the source.
+design-verification/
+release-evidence/

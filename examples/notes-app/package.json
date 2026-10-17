@@ -1,0 +1,6 @@
+{
+  "name": "example-notes-app",
+  "private": true,
+  "description": "Fictional manifest for trying local stack detection. Do not install these illustrative dependencies.",
+  "dependencies": { "react": "*", "express": "*", "pg": "*" }
+}
