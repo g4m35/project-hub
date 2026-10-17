@@ -82,7 +82,20 @@ const ignored = new Set([
   "work",
   "scratchpad",
   ".turbo",
+  "examples",
+  "fixtures",
+  "__fixtures__",
 ]);
+export function isProjectManifest(file) {
+  const parts = file.split("/");
+  return (
+    parts.at(-1) === "package.json" &&
+    parts.length <= 5 &&
+    parts
+      .slice(0, -1)
+      .every((part) => !ignored.has(part) && !part.startsWith("."))
+  );
+}
 export function manifests(root, maxDepth = 3) {
   const files = [];
   let count = 0;

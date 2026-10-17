@@ -9,6 +9,7 @@ import {
   validateSubscription,
   safePath,
   manifests,
+  isProjectManifest,
 } from "../server/domain.mjs";
 test("GitHub remotes normalize without accepting credentials or other hosts", () => {
   assert.equal(
@@ -53,6 +54,34 @@ test("file discovery skips dependencies and symlinks", () => {
     assert.deepEqual(manifests(root), [path.join(root, "package.json")]);
   } finally {
     fs.rmSync(root, { recursive: true });
+  }
+});
+test("stack scans exclude nested examples and fixtures but allow an explicitly chosen example", () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "hub-manifest-"));
+  try {
+    for (const dir of ["apps/web", "examples/demo", "fixtures/app"])
+      fs.mkdirSync(path.join(root, dir), { recursive: true });
+    const files = [
+      "package.json",
+      "apps/web/package.json",
+      "examples/demo/package.json",
+      "fixtures/app/package.json",
+    ];
+    for (const file of files) fs.writeFileSync(path.join(root, file), "{}");
+    assert.deepEqual(
+      manifests(root)
+        .map((file) => path.relative(root, file))
+        .sort(),
+      ["apps/web/package.json", "package.json"],
+    );
+    assert.deepEqual(files.filter(isProjectManifest), [
+      "package.json",
+      "apps/web/package.json",
+    ]);
+    const example = path.join(root, "examples/demo");
+    assert.deepEqual(manifests(example), [path.join(example, "package.json")]);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
   }
 });
 const p = [{ id: "project" }];

@@ -1912,7 +1912,7 @@ summary:focus-visible {
   display: grid;
   grid-template-columns: 160px minmax(180px, 1fr) auto;
 }
-.chat-tools > select {
+.chat-scope {
   min-height: 44px;
   width: 100%;
   font: inherit;
@@ -1925,6 +1925,14 @@ summary:focus-visible {
 .chat-tools .chat-search {
   width: 100%;
 }
+@media (min-width: 721px) and (max-width: 1100px) {
+  .chat-tools {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+  .chat-filters {
+    grid-column: 1 / -1;
+  }
+}
 .live-chats > .build-note {
   margin-top: 18px;
 }
@@ -1932,7 +1940,7 @@ summary:focus-visible {
   .chat-tools {
     display: flex;
   }
-  .chat-tools > select {
+  .chat-scope {
     width: 100%;
   }
 }

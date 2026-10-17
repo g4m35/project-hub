@@ -1,6 +1,6 @@
 # Roadmap
 
-Current release: 0.1.0-alpha.1, one owner per installation.
+Current release: 0.1.0-alpha.2, one owner per installation.
 
 1. Installation feedback: five independent users connect one project without maintainer help.
 2. One Needs you inbox for failing builds, chats waiting for input and upcoming renewals.

@@ -4,6 +4,8 @@ See which project needs you: connected stacks, GitHub issues, deployments, AI ch
 
 **Self-hosted alpha.** Each installation belongs to one person. Start locally with no accounts, or deploy your own private cloud copy. This is not a shared multi-user service.
 
+![Project Hub showing the fictional demo stack and an added example project](docs/screenshots/project-hub-demo.png)
+
 ## Try it in three commands
 
 Install [Node.js 24 LTS or newer](https://nodejs.org/en/download), download this repository's source ZIP (or clone your fork), then open a terminal in the extracted folder:
@@ -17,6 +19,8 @@ npm run demo
 Open **http://127.0.0.1:3008**. The demo contains fictional projects and one example subscription. Provider requests and chat reading are disabled. Stop with **Ctrl+C**.
 
 To start your own empty hub, run **`npm start`** and open **http://127.0.0.1:3007**. Select **Add project**, paste the absolute path to `examples/notes-app` inside this checkout, and preview its detected stack. Then add your own project folder or GitHub repository. Demo data and your hub use separate data folders.
+
+Trying it for the first time? Connect one project, then [report the first confusing step or bug](https://github.com/g4m35/project-hub/issues/new/choose). Include your OS, Node version, and what you expected. Remove tokens, personal paths, and private project/chat details from screenshots and logs.
 
 ## What works
 

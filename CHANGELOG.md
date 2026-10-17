@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha.2
+
+- Keep chat controls inside the page at tablet widths.
+- Hide Rescan for sample stacks without a folder or repository.
+- Exclude nested examples and fixtures from automatic stack detection; explicitly chosen example folders still work.
+- Add a real demo screenshot and a direct path for first-tester feedback.
+
 ## 0.1.0-alpha.1
 
 Initial self-hosted alpha:

@@ -290,6 +290,10 @@ const server = http.createServer(async (req, res) => {
           return;
         }
         if (match[2] === "rescan" && req.method === "POST") {
+          if (!p.path && !p.repo)
+            throw new Error(
+              "This saved stack has no folder or repository to rescan.",
+            );
           const fresh = p.path
             ? await scanProject(p.path, p.name)
             : await remoteProject(p.repo);

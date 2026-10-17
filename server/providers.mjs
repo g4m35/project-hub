@@ -1,6 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
-import { exec, home, json, detectStack, id, repoName } from "./domain.mjs";
+import {
+  exec,
+  home,
+  json,
+  detectStack,
+  id,
+  repoName,
+  isProjectManifest,
+} from "./domain.mjs";
 import { credential } from "../cloud/credentials.mjs";
 import { summarizeWorkflowRuns } from "./project-state.mjs";
 const ghPath =
@@ -220,13 +228,7 @@ export async function remoteProject(value) {
         "?recursive=1",
     );
     const files = (tree.tree || [])
-      .filter(
-        (f) =>
-          f.type === "blob" &&
-          /(^|\/)package.json$/.test(f.path) &&
-          f.path.split("/").length <= 5 &&
-          !/(^|\/)(node_modules|vendor|dist|build|fixtures)(\/|$)/.test(f.path),
-      )
+      .filter((f) => f.type === "blob" && isProjectManifest(f.path))
       .slice(0, 20);
     const found = await Promise.allSettled(
       files.map(async (f) => {

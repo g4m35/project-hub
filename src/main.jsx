@@ -1182,6 +1182,7 @@ function ChatPanel({ source, compact = false, onAll }) {
       {!compact && (
         <div className="chat-tools">
           <select
+            className="chat-scope"
             aria-label="Chat scope"
             value={scope}
             onChange={(e) => setScope(e.target.value)}
@@ -1808,7 +1809,7 @@ function App() {
                             <Github size={16} />
                             Link repository
                           </button>
-                        ) : (
+                        ) : project.path || project.repo ? (
                           <button
                             className="text-button"
                             onClick={() =>
@@ -1825,7 +1826,7 @@ function App() {
                             <RefreshCw size={15} />
                             Rescan
                           </button>
-                        )}
+                        ) : null}
                       </div>
                       <StackMap
                         project={project}
