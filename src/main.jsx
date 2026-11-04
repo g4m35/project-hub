@@ -16,7 +16,6 @@ import {
   Plus,
   Plug,
   FolderOpen,
-  Github,
   ArrowUpRight,
   RefreshCw,
   Pause,
@@ -42,6 +41,7 @@ import {
 import "@xyflow/react/dist/style.css";
 import "./styles.css";
 import { cloud, auth, SignIn } from "./auth.jsx";
+import { Github } from "./icons.jsx";
 
 let token = "";
 async function api(url, method = "GET", data) {
