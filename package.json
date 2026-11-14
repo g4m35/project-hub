@@ -28,7 +28,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.0",
     "vite": "^8.3.4"
   },
   "description": "A private project hub for connected stacks, issues, deployments, AI chat activity and renewals.",
